@@ -22,11 +22,13 @@ public class PlayerMove : MonoBehaviour {
 
 		if(Horizontal == -1)
 		{
-			 transform.Rotate(rotationSpeed * Vector3.forward * Time.deltaTime);
+			transform.Translate(-moveSpeed, 0, 0);
+			//transform.Rotate(rotationSpeed * Vector3.forward * Time.deltaTime);
 		}
 		if(Horizontal == 1)
 		{
-			 transform.Rotate(rotationSpeed * Vector3.back * Time.deltaTime);
+			transform.Translate(moveSpeed, 0, 0);
+			//transform.Rotate(rotationSpeed * Vector3.back * Time.deltaTime);
 		}
 
 	}
