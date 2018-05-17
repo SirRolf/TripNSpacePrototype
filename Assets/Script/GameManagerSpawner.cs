@@ -34,17 +34,13 @@ public class GameManagerSpawner : MonoBehaviour {
 
 	private void Spawnastroid_1()
 	{
-		Debug.Log("Spawn astroid1");
-
-		Vector3 spawnPosition = new Vector3(Random.Range(-7.0f, 7.0f), 11, 0);
+		Vector3 spawnPosition = new Vector3(Random.Range(0.0f, 27.0f), 11, 0);
 		Instantiate(astroid_1, spawnPosition, Quaternion.identity);
 
 		timer = 0;
 	}
 	private void Spawnastroid_2()
 	{
-		Debug.Log("Spawn astroid2");
-
 		Vector3 spawnPosition = new Vector3(Random.Range(-7.0f, 7.0f), 11, 0);
 		Instantiate(astroid_2, spawnPosition, Quaternion.identity);
 
@@ -52,8 +48,6 @@ public class GameManagerSpawner : MonoBehaviour {
 	}
 	private void Spawnastroid_3()
 	{
-		Debug.Log("Spawn astroid3");
-
 		Vector3 spawnPosition = new Vector3(Random.Range(-7.0f, 7.0f), 11, 0);
 		Instantiate(astroid_3, spawnPosition, Quaternion.identity);
 

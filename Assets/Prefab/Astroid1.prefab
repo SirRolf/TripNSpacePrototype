@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50304334102660338}
   - component: {fileID: 61152484952821276}
   - component: {fileID: 114701756553158018}
-  - component: {fileID: 114836847619527086}
+  - component: {fileID: 114084596919612044}
   m_Layer: 0
   m_Name: Astroid1
   m_TagString: Untagged
@@ -73,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.3495624, y: 0.42798746}
@@ -89,6 +89,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.080958, y: 5.9977255}
   m_EdgeRadius: 0
+--- !u!114 &114084596919612044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042916353749178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b956ede6e855fa64dab10c4c2a4ad4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeedDown: 0.1
+  moveSpeedLeft: 0.1
 --- !u!114 &114701756553158018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,18 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bda58f23ca1370438d0c1588fbb0a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114836847619527086
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042916353749178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b977d4e39c5a44ea5a4b17806f22c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.1
 --- !u!212 &212444158697435380
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class AstroidCollision : MonoBehaviour {
 
-	void OnCollisionEnter2D(Collision2D col)
+	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log("collision");
+		if(col.gameObject.tag == "Bullet")
+		{
+			Debug.Log (col.gameObject.tag);
+			Destroy(gameObject);
+			Destroy(col.gameObject);
+		}
 	}
 }
