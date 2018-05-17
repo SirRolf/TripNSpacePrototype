@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212184347670685258}
   - component: {fileID: 50317374146772212}
   - component: {fileID: 61124936321334698}
-  - component: {fileID: 114540335652029862}
+  - component: {fileID: 114362327130817614}
   - component: {fileID: 114443508559323886}
   m_Layer: 0
   m_Name: Astroid3
@@ -89,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.0051003, y: 5.875724}
   m_EdgeRadius: 0
+--- !u!114 &114362327130817614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685883271594302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc07cdf478758204798282ec87f34380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!114 &114443508559323886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,17 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
---- !u!114 &114540335652029862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1685883271594302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bda58f23ca1370438d0c1588fbb0a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212184347670685258
 SpriteRenderer:
   m_ObjectHideFlags: 1
