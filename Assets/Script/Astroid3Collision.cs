@@ -10,11 +10,14 @@ public class Astroid3Collision : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "Bullet")
 		{
-			Debug.Log (col.gameObject.tag);
 			health--;
 			Destroy(col.gameObject);
 		}
 		if(health == 0)
+		{
+			Destroy(gameObject);
+		}
+		if(col.gameObject.name == "DespawnZone")
 		{
 			Destroy(gameObject);
 		}

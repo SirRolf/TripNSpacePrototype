@@ -8,9 +8,13 @@ public class AstroidCollision : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "Bullet")
 		{
-			Debug.Log (col.gameObject.tag);
 			Destroy(gameObject);
 			Destroy(col.gameObject);
+		}
+		
+		if(col.gameObject.name == "DespawnZone")
+		{
+			Destroy(gameObject);
 		}
 	}
 }

@@ -1,11 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AstroidMovement : MonoBehaviour {
+public class Astroid2Movement : MonoBehaviour {
 
-	public float moveSpeedMin = 0.05f;
-	public float moveSpeedMax = 0.1f;
+	public float moveSpeedMin = 0.1f;
+	public float moveSpeedMax = 0.2f;
 
 	private float moveSpeed;
 

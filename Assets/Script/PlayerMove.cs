@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour {
 		float Horizontal = Input.GetAxisRaw("Horizontal");
 		float Vertical = Input.GetAxisRaw("Vertical");
 
+
+
 		if(Vertical == 1)
 		{
 			transform.Translate(0, moveSpeed, 0);

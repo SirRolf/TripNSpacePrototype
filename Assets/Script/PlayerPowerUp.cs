@@ -8,7 +8,7 @@ public class PlayerPowerUp : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(col.gameObject.name == "PowerUpTriple")
+		if(col.gameObject.name == "PowerUpTriple(Clone)")
 		{
 			this.gameObject.GetComponent<SpriteRenderer>().sprite = PowerupTriple;
 			Destroy(col.gameObject);
