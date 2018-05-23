@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212444158697435380}
   - component: {fileID: 50304334102660338}
   - component: {fileID: 61152484952821276}
-  - component: {fileID: 114701756553158018}
   - component: {fileID: 114084596919612044}
+  - component: {fileID: 114066412691626738}
   m_Layer: 0
   m_Name: Astroid1
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042916353749178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.98, z: 0}
+  m_LocalPosition: {x: -1.8704917, y: 3.248876, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.080958, y: 5.9977255}
   m_EdgeRadius: 0
+--- !u!114 &114066412691626738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042916353749178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc07cdf478758204798282ec87f34380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &114084596919612044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,17 +115,6 @@ MonoBehaviour:
   moveSpeedDownMin: 0.1
   moveSpeedDownMax: 0.15
   moveSpeedLeft: 0.2
---- !u!114 &114701756553158018
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042916353749178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bda58f23ca1370438d0c1588fbb0a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212444158697435380
 SpriteRenderer:
   m_ObjectHideFlags: 1

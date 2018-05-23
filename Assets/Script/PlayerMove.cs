@@ -8,11 +8,15 @@ public class PlayerMove : MonoBehaviour {
 	public float moveSpeed;
 
 	void Update () {
-		float Horizontal = Input.GetAxisRaw("Horizontal");
-		float Vertical = Input.GetAxisRaw("Vertical");
+		float horizontal = Input.GetAxis("Horizontal");
+		float vertical = Input.GetAxis("Vertical");
+		Vector3 direction = new Vector3(horizontal, vertical, 0);
 
+		if (direction.magnitude > 1)
+			direction.Normalize();
 
-
+		transform.Translate(direction * moveSpeed * Time.deltaTime);
+		/*
 		if(Vertical == 1)
 		{
 			transform.Translate(0, moveSpeed, 0);
@@ -31,6 +35,6 @@ public class PlayerMove : MonoBehaviour {
 			transform.Translate(moveSpeed, 0, 0);
 			//transform.Rotate(rotationSpeed * Vector3.back * Time.deltaTime);
 		}
-
+		*/
 	}
 }

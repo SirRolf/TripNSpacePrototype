@@ -75,29 +75,38 @@ public class GameManagerSpawner : MonoBehaviour {
 	private void Spawnastroid_1()
 	{
 		Vector3 spawnPosition1 = new Vector3(Random.Range(PlayerPosx + -10.0f,PlayerPosx + 35.0f), PlayerPosy + 12.5f, 0);
-		Instantiate(astroid_1, spawnPosition1, Quaternion.identity);
+		GameObject go1 = Instantiate(astroid_1, spawnPosition1, Quaternion.identity);
+		go1.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition2 = new Vector3(Random.Range(PlayerPosx + 45.0f,PlayerPosx + 35.0f), PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_1, spawnPosition2, Quaternion.identity);
+		GameObject go2 = Instantiate(astroid_1, spawnPosition2, Quaternion.identity);
+		go2.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition3 = new Vector3(Random.Range(PlayerPosx + -10.0f,PlayerPosx + -20.0f), PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_1, spawnPosition3, Quaternion.identity);
+		GameObject go3 = Instantiate(astroid_1, spawnPosition3, Quaternion.identity);
+		go3.GetComponent<AstroidCollision>().manager = this.gameObject;
 	}
 	private void Spawnastroid_2()
 	{
 		Vector3 spawnPosition1 = new Vector3(Random.Range(PlayerPosx + -12.0f, PlayerPosx + 12.0f), PlayerPosy + 12.5f, 0);
-		Instantiate(astroid_2, spawnPosition1, Quaternion.identity);
+		GameObject go1 = Instantiate(astroid_2, spawnPosition1, Quaternion.identity);
+		go1.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition2 = new Vector3(Random.Range(PlayerPosx + 17.0f, PlayerPosx + 12.0f), PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_2, spawnPosition2, Quaternion.identity);
+		GameObject go2 = Instantiate(astroid_2, spawnPosition2, Quaternion.identity);
+		go2.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition3 = new Vector3(Random.Range(PlayerPosx + -17.0f, PlayerPosx + -12.0f), PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_2, spawnPosition3, Quaternion.identity);
+		GameObject go3 = Instantiate(astroid_2, spawnPosition3, Quaternion.identity);
+		go3.GetComponent<AstroidCollision>().manager = this.gameObject;
 	}
 	private void Spawnastroid_3()
 	{
 		Vector3 spawnPosition1 = new Vector3(Random.Range(PlayerPosx + -12.0f, PlayerPosx + 12.0f),PlayerPosy + 12.5f, 0);
-		Instantiate(astroid_3, spawnPosition1, Quaternion.identity);
+		GameObject go1 = Instantiate(astroid_3, spawnPosition1, Quaternion.identity);
+		go1.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition2 = new Vector3(Random.Range(PlayerPosx + 17.0f, PlayerPosx + 12.0f),PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_3, spawnPosition2, Quaternion.identity);
+		GameObject go2 = Instantiate(astroid_3, spawnPosition2, Quaternion.identity);
+		go2.GetComponent<AstroidCollision>().manager = this.gameObject;
 		Vector3 spawnPosition3 = new Vector3(Random.Range(PlayerPosx + -17.0f, PlayerPosx + -12.0f),PlayerPosy + 6.5f, 0);
-		Instantiate(astroid_3, spawnPosition3, Quaternion.identity);
+		GameObject go3 = Instantiate(astroid_3, spawnPosition3, Quaternion.identity);
+		go3.GetComponent<AstroidCollision>().manager = this.gameObject;
 	}
 
 	private void SpawnTriple()
