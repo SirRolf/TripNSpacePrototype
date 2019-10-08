@@ -11,11 +11,11 @@ public class Astroid1Movement : MonoBehaviour {
 	private float moveSpeedDown;
 
 	void Awake() {
-		moveSpeedLeft = Random.Range(0.1f, 0.2f);
+		moveSpeedLeft = Random.Range(6f, 12f);
 		moveSpeedDown = Random.Range(moveSpeedDownMin, moveSpeedDownMax);
 	}
 
 	void Update () {
-			transform.Translate(-moveSpeedLeft, -moveSpeedDown, 0);
+		transform.Translate(-moveSpeedLeft * Time.deltaTime, -moveSpeedDown * Time.deltaTime, 0);
 	}
 }

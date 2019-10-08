@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4630619503283696}
   - component: {fileID: 212656543894927914}
   - component: {fileID: 114642251163907590}
-  - component: {fileID: 58904066085465224}
   - component: {fileID: 50918733139557696}
+  - component: {fileID: 70201824065212078}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -36,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1812808615532666}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6181169, y: -0.5080687, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.4640975, y: 0.58472097, z: 0}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58904066085465224
-CircleCollider2D:
+--- !u!70 &70201824065212078
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,9 +75,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.049003363, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1909635
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.3400002, y: 4.5100007}
+  m_Direction: 0
 --- !u!114 &114642251163907590
 MonoBehaviour:
   m_ObjectHideFlags: 1

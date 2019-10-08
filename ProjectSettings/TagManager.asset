@@ -6,6 +6,19 @@ TagManager:
   tags:
   - Bullet
   - PowerUp
+  - Despawn
+  - music
+  - effectSource
+  - musicSource
+  - canvasMainMenu
+  - audioPanel
+  - helpPanel
+  - mainPanel
+  - backButton
+  - Slider1
+  - Slider
+  - pauzePanel
+  - JelliAbil
   layers:
   - Default
   - TransparentFX

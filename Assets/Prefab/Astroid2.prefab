@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4317896433890718}
   - component: {fileID: 212612750463523608}
   - component: {fileID: 50656939760967590}
-  - component: {fileID: 61908396291253238}
   - component: {fileID: 114874585548747978}
   - component: {fileID: 114504762909407344}
+  - component: {fileID: 58759120954743530}
   m_Layer: 0
   m_Name: Astroid2
   m_TagString: Untagged
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224911062459084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9269257, y: 4.0430675, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -6.4462605, y: 1.7421451, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61908396291253238
-BoxCollider2D:
+--- !u!58 &58759120954743530
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,19 +76,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.049152255, y: 0.016896486}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.2546732, y: 2.2663083}
-  m_EdgeRadius: 0
+  m_Radius: 3.03
 --- !u!114 &114504762909407344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,8 +91,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  score: {fileID: 0}
+  explosion: {fileID: 1608443666825318, guid: 190b63c85f4987648ad5d1676afe22ea, type: 2}
+  Hit: {fileID: 1756317738034404, guid: ec7919ebabdb4d94faf3da0aadf1d0fb, type: 2}
   damage: 2
+  astroidType: 2
   health: 1
+  scoreReward: 100
+  minScale: 0.05
+  maxScale: 0.15
 --- !u!114 &114874585548747978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b977d4e39c5a44ea5a4b17806f22c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedMin: 0.2
-  moveSpeedMax: 0.3
+  moveSpeedMin: 8
+  moveSpeedMax: 14
 --- !u!212 &212612750463523608
 SpriteRenderer:
   m_ObjectHideFlags: 1

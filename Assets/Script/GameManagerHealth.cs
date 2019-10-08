@@ -1,13 +1,33 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagerHealth : MonoBehaviour {
 
-	public int health = 11;
+	public float health = 11;
+
+	public float timer;
+	private float GameOverTimer;
+
+	public float invinciTime;
+	public bool invinciTrue;
+	public float time2;
+	public bool isDead = false;
 
 	public GameObject panelGameOver;
+	public GameObject score;
+
+	public AudioSource source1;
+
+	public GameObject deathBoom;
+
+	public GameObject Player;
+
+	public CameraShake cameraShake;
+
+	public bool gameOver;
 
 	public Image healthbar;
 
@@ -27,8 +47,18 @@ public class GameManagerHealth : MonoBehaviour {
 
 	public Sprite[] sprites;
 
+	void Start()
+
+	{
+
+
+		source1 = GameObject.FindGameObjectWithTag("effectSource2").GetComponent<AudioSource>();
+
+		Time.timeScale = 1f;
+	}
+
 	void UpdateHealthUI () {
-		if (health == 11) {
+		if (health >= 11) {
 			//	healthbar.sprite = sprites[health]
 			healthbar.sprite = a11;
 		}
@@ -62,18 +92,39 @@ public class GameManagerHealth : MonoBehaviour {
 		if (health == 1) {
 			healthbar.sprite = a1;
 		}
-		if (health == 0) {
+		if (health <= 0) {
 			healthbar.sprite = a0;
 		}
 	}
 
+
 	void Update()
 	{
+		if(isDead == false){
+			time2 = 0;
+		} else{
+			time2 = Time.deltaTime;
+		}
+		if(time2 == 4){
+
+			Destroy(Player);
+
+		}
+
+
 		float reset = Input.GetAxisRaw("Reset");
+
+		timer += Time.deltaTime;
+
+		if (timer <= invinciTime) {
+			invinciTrue = true;
+		} else {
+			invinciTrue = false;
+		}
 
 		if(reset == 1)
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			SceneManager.LoadScene(1);
 		}
 		if (health <= 0)
 		{
@@ -83,12 +134,39 @@ public class GameManagerHealth : MonoBehaviour {
 
 	public void GameOver()
 	{
+		GameOverTimer += Time.deltaTime;
+		gameOver = true;
 		panelGameOver.SetActive(true);
+		score.GetComponent<Score>().UpdateHighScore();
+		if(GameOverTimer > 3.7f)
+		{
+			Destroy(Player);
+				Time.timeScale = 0.25f;
+		}
+		Player.GetComponent<PlayerMove> ().enabled = false;
+		Player.GetComponent<PlayerShoot> ().enabled = false;
+		Vector3 spawnPosition = new Vector3(Player.transform.position.x, Player.transform.position.y, 0);
+		if (isDead == false)
+		{
+			Instantiate(deathBoom, spawnPosition, Quaternion.identity);
+			isDead = true;
+		}
+
 	}
 
-	public void TakeDamage(int damage)
+	public void TakeDamage(float damage)
 	{
-		health -= damage;
-		UpdateHealthUI();
+		if (invinciTrue == false || damage <= 0) {
+			health -= damage;
+			if (health >= 11) {
+				health = 11;
+			}
+			source1.Play();
+			UpdateHealthUI ();
+			StartCoroutine (cameraShake.Shake (.15f, .4f));
+			timer = 0f;
+		}
 	}
+
+
 }

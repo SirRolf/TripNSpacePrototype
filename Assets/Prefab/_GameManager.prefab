@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4180595829240454}
   - component: {fileID: 114250852486186134}
   - component: {fileID: 114772865661776498}
+  - component: {fileID: 114982860072792804}
+  - component: {fileID: 114715847969541742}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -52,13 +54,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4080ba87250fc79419d9a23bccc3e586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astroid_1: {fileID: 1042916353749178, guid: 6adab9faa685feb49bde1da5a84acf67, type: 2}
+  astroid_1: {fileID: 1336343444229718, guid: f0dda843072161e4f86d371a2069fdc2, type: 2}
   astroid_2: {fileID: 1224911062459084, guid: 412d82232fc79ec49a7d2d1d21b20373, type: 2}
   astroid_3: {fileID: 1685883271594302, guid: 99aa9e1c8d6368f4694ea52401acb68f, type: 2}
   powerup_triple: {fileID: 1300647472174424, guid: cb90b92d8bdbc4b409c877575ddcd9f9,
     type: 2}
-  spawnRateAstroids: 0.15
-  spawnRatePowerup: 5
+  Powerup_Health: {fileID: 1611753691652898, guid: 45d50abd3406ba04e9d5a600f981f7c4,
+    type: 2}
+  Boss_Swarm: {fileID: 1787354072462894, guid: 39022d10c6e35024eb44e483d08124fc, type: 2}
+  spawnRateAstroids: 0.3
+  spawnRatePowerup: 25
+  BossTimer: 25
+  BossSpawnAmount: 13
+--- !u!114 &114715847969541742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497986145276164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c7279fdc3123b4dac2a51ec89aed2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aPanel: {fileID: 0}
+  musicManager: {fileID: 0}
+  clip: {fileID: 8300000, guid: bf1e90a03c9aba041b4a8dc9455cb65f, type: 3}
 --- !u!114 &114772865661776498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +91,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7659c2e5d84f2468be547cdf470b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 11
+  timer: 0
+  invinciTime: 0.75
+  invinciTrue: 0
+  time2: 4
+  isDead: 0
+  panelGameOver: {fileID: 0}
+  score: {fileID: 0}
+  source1: {fileID: 0}
+  deathBoom: {fileID: 1579347195318866, guid: 28924f140ec905946a24425e1f2705c3, type: 2}
+  Player: {fileID: 0}
+  cameraShake: {fileID: 0}
+  gameOver: 0
   healthbar: {fileID: 0}
   a11: {fileID: 21300000, guid: 5a677bd903627e244b91bdeb998a4a26, type: 3}
   a10: {fileID: 21300000, guid: dab82cd4d2492324298ee3ff77344c63, type: 3}
@@ -84,3 +118,16 @@ MonoBehaviour:
   a1: {fileID: 21300000, guid: a686453df70b5c74a955069a4589265c, type: 3}
   a0: {fileID: 21300000, guid: 60b5c02d645a3d54faf5cda8ccd25cce, type: 3}
   sprites: []
+--- !u!114 &114982860072792804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497986145276164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967656ab50a9c5f43b32829cb7945c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pPanel: {fileID: 0}
+  Player: {fileID: 0}
